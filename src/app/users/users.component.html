@@ -1,0 +1,29 @@
+<form [formGroup]="profileForm" (ngSubmit)="submit()">
+  <h1 mat-dialog-title>{{ title }}</h1>
+
+  <input matInput formControlName="firstName" placeholder="Enter first name" />
+  <input matInput formControlName="lastName" placeholder="Enter last name" />
+  <input matInput formControlName="email" placeholder="Enter email" />
+  <img [src]="url" />
+</form>
+
+<div class="container">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employe of employees">
+        <td>{{ employe.first_name }} {{ employe.last_name }}</td>
+        <td>{{ employe.email }}</td>
+        <td><img [src]="employe.avatar" /></td>
+        <td><button (click)="edit(employe)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

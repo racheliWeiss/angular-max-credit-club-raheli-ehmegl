@@ -1,0 +1,9 @@
+/* Add application styles & imports to this file! */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html {
+  background-color: #e4e9fd;
+  background-image: -webkit-linear-gradient(65deg, #b9bdbc 50%, #aaa7a7 50%);
+  min-height: 1000px;
+  height: 100%;
+}
